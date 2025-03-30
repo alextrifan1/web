@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - DriveEasy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <nav class="sidebar">
+        <ul class="menu">
+            <li><a href="#"><i class="fas fa-home"></i> Acasă</a></li>
+            <li class="has-submenu">
+                <a href="#"><i class="fas fa-cogs"></i> Servicii</a>
+                <ul class="submenu">
+                    <li><a href="#">Buying&Selling</a></li>
+                    <li><a href="#">Car Rent</a></li>
+                    <li><a href="#">Detailing</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="#"><i class="fas fa-info-circle"></i> Despre</a>
+                <ul class="submenu">
+                    <li><a href="#">Echipă</a></li>
+                    <li><a href="#">Istoric</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <header>
+            <div class="logo">DriveEasy</div>
+            <div class="login-title">
+                <h2><i class="fas fa-sign-in-alt"></i> Login</h2>
+            </div>
+        </header>
+
+        <section class="login-form">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="mail" placeholder="you@example.com">
+
+            <label for="password">Parola</label>
+            <input type="password" id="password" name="password">
+
+            <label>Rol:</label>
+            <label><input type="radio" name="role" value="admin"> Admin</label>
+            <label><input type="radio" name="role" value="user" checked> User Normal</label>
+
+            <input type="submit" value="Login">
+
+            <details>
+                <summary>Ajutor</summary>
+                <ol type="a">
+                    <li><p><b>Nu ai cont?</b> <a href="signup.html">Sign Up</a></p></li>
+                    <li><p>Mergi pe pagina principală <a href="index.html">Home</a></p></li>
+                    <li><textarea rows="2" cols="20" placeholder="Lasă un mesaj"></textarea></li>
+                </ol>
+            </details>
+        </section>
+
+        <footer>
+            <h2>Contact</h2>
+            <ul>
+                <li>Email: support@driveeasy.com</li>
+                <li>Telefon: 771 108 746</li>
+                <li>Adrese:
+                    <ul>
+                        <li>Strada Bogdan Petriceicu Nr 90</li>
+                        <li>Strada Crinului Nr 16</li>
+                    </ul>
+                </li>
+                <li>Program:
+                    <ul>
+                        <li>Luni-Vineri: 9:00 - 18:00</li>
+                        <li>Sâmbătă/Duminică: Închis</li>
+                    </ul>
+                </li>
+            </ul>
+        </footer>
+    </main>
+</div>
+</body>
+</html>
