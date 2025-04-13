@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up - DriveEasy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+  <nav class="sidebar">
+    <ul class="menu">
+      <li><a href="index.html"><i class="fas fa-home"></i> Acasă</a></li>
+      <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+    </ul>
+  </nav>
+
+  <main class="content">
+    <header>
+      <div class="logo">DriveEasy</div>
+      <div class="login-title">
+        <h2><i class="fas fa-user-plus"></i> Sign Up</h2>
+      </div>
+    </header>
+
+    <section class="login-form">
+      <h3>Nu uita să îți alegi tipul favorit de mașină!</h3>
+      <form id="signup-form">
+
+        <div class="input-wrapper">
+          <label for="full_name">Nume</label>
+          <div class="input-with-status">
+            <input type="text" id="full_name" name="full_name">
+            <span class="status-dot" id="full_name_status"></span>
+          </div>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="username">Utilizator</label>
+          <div class="input-with-status">
+            <input type="text" id="username" name="username">
+            <span class="status-dot" id="username_status"></span>
+          </div>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="email">Email</label>
+          <div class="input-with-status">
+            <input type="text" id="email" name="email">
+            <span class="status-dot" id="email_status"></span>
+          </div>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="password">Parola</label>
+          <div class="input-with-status">
+            <input type="password" id="password" name="password">
+            <span class="status-dot" id="password_status"></span>
+          </div>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="confirm_password">Confirmă Parola</label>
+          <input type="password" id="confirm_password" name="confirm_password">
+        </div>
+
+        <div class="input-wrapper">
+          <label for="phone">Telefon</label>
+          <div class="input-with-status">
+            <input type="text" id="phone" name="phone" placeholder="(+40) 777 777 777">
+            <span class="status-dot" id="phone_status"></span>
+          </div>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="birthdate">Data nașterii</label>
+          <div class="input-with-status">
+            <input type="text" id="birthdate" name="birthdate" placeholder="31/12/2000">
+            <span class="status-dot" id="date_status"></span>
+          </div>
+        </div>
+
+        <label>Rol</label>
+        <label><input type="radio" name="role" value="admin"> Admin</label>
+        <label><input type="radio" name="role" value="user" checked> Utilizator Normal</label>
+
+        <label>Preferințe</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="car_type" value="Sedan"> Sedan</label>
+          <label><input type="checkbox" name="car_type" value="SUV"> SUV</label>
+          <label><input type="checkbox" name="car_type" value="Break"> Break</label>
+          <label><input type="checkbox" name="car_type" value="Electric"> Electric</label>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="judet">Județ</label>
+          <select id="judet" name="judet"></select>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="oras">Oraș</label>
+          <select id="oras" name="oras"></select>
+        </div>
+
+
+        <input type="submit" value="Sign Up">
+      </form>
+    </section>
+
+
+    <footer>
+      <h2>Contact</h2>
+      <ul>
+        <li>Email: support@driveeasy.com</li>
+        <li>Telefon: 771 108 746</li>
+        <li>Adrese:
+          <ul>
+            <li>Strada Bogdan Petriceicu Nr 90</li>
+            <li>Strada Crinului Nr 16</li>
+          </ul>
+        </li>
+        <li>Program:
+          <ul>
+            <li>Luni–Vineri: 9:00 – 18:00</li>
+            <li>Sâmbătă/Duminică: Închis</li>
+          </ul>
+        </li>
+      </ul>
+    </footer>
+  </main>
+</div>
+
+<!-- JS-urile vor fi aici -->
+<script src="validareText.js"></script>
+<script src="validareParola.js"></script>
+<script src="validareEmail.js"></script>
+<script src="validareTelefon.js"></script>
+<script src="validareData.js"></script>
+<script src="validareFormular.js"></script>
+<script src="dropdownJudeteOrase.js"></script>
+
+</body>
+</html>

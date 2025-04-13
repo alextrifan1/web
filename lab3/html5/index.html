@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>DriveEasy - Pagina Principală</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- MENIU VERTICAL -->
+    <nav class="sidebar">
+        <ul class="menu">
+            <li><a href="#"><i class="fas fa-home"></i> Acasă</a></li>
+            <li class="has-submenu">
+                <a href="#"><i class="fas fa-car"></i> Mașini</a>
+                <ul class="submenu">
+                    <li><a href="#">Noi</a></li>
+                    <li><a href="#">Second-hand</a></li>
+                </ul>
+            </li>
+            <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONȚINUT -->
+    <main class="content">
+        <header>
+            <div class="logo">DriveEasy</div>
+            <div class="header-links">
+                <a href="index.html"><i class="fas fa-house"></i> Home</a>
+            </div>
+        </header>
+
+
+        <!-- FILTRARE -->
+        <section>
+            <h2>Filtrare mașini</h2>
+            <article>
+                <form>
+                    <table>
+                        <tr>
+                            <td>
+                                <fieldset>
+                                    <legend>Tip mașină</legend>
+                                    <input type="checkbox" name="type" value="Sedan"> Sedan<br>
+                                    <input type="checkbox" name="type" value="SUV"> SUV<br>
+                                    <input type="checkbox" name="type" value="Break"> Break<br>
+                                </fieldset>
+                            </td>
+                            <td>
+                                <fieldset>
+                                    <legend>Combustibil</legend>
+                                    <input type="checkbox" name="fuel" value="Benzina"> Benzină<br>
+                                    <input type="checkbox" name="fuel" value="Diesel"> Diesel<br>
+                                    <input type="checkbox" name="fuel" value="Electric"> Electric<br>
+                                </fieldset>
+                            </td>
+                            <td>
+                                <fieldset>
+                                    <legend>Preț</legend>
+                                    <input type="text" name="price_min" placeholder="Min"> <br>
+                                    <input type="text" name="price_max" placeholder="Max"> <br>
+                                </fieldset>
+                            </td>
+                            <td>
+                                <fieldset>
+                                    <legend>Stare</legend>
+                                    <input type="radio" name="stare" value="nou"> Nou<br>
+                                    <input type="radio" name="stare" value="utilizat"> Utilizat<br>
+                                </fieldset>
+                            </td>
+                            <td>
+                                <fieldset>
+                                    <legend>Marcă</legend>
+                                    <select name="marca">
+                                        <option value="all">Toate</option>
+                                        <option value="Toyota">Toyota</option>
+                                        <option value="Honda">Honda</option>
+                                        <option value="BMW">BMW</option>
+                                        <option value="Audi">Audi</option>
+                                    </select>
+                                </fieldset>
+                            </td>
+                            <td>
+                                <input type="submit" value="Aplică filtre">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </article>
+        </section>
+
+        <section class="slider-section">
+        <h2>Mașini recomandate</h2>
+        <div class="slider">
+            <div class="main-image" id="slider-main">
+                <img src="imagini/daciaDuster.jpg" alt="Imagine mare" id="main-slider-img">
+                <div class="slider-caption" id="slider-caption">Dacia Duster</div>
+            </div>
+
+            <div class="slider-controls">
+                <button id="prevSlide"><i class="fas fa-arrow-left"></i> Previous</button>
+                <button id="togglePlay"><i class="fas fa-pause"></i> Pause</button>
+                <button id="nextSlide">Next <i class="fas fa-arrow-right"></i></button>
+            </div>
+
+            <div class="slider-options">
+                <label><input type="checkbox" id="repeatToggle"> Repetă slideshow</label>
+
+                <label for="intervalSelect">Interval schimbare (secunde):</label>
+                <select id="intervalSelect">
+                    <option value="2000">2s</option>
+                    <option value="4000" selected>4s</option>
+                    <option value="6000">6s</option>
+                    <option value="10000">10s</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+
+        <!-- ANUNȚURI -->
+        <section>
+            <h2>Anunțuri disponibile</h2>
+            <article>
+                <table class="tabel-sortabil">
+                    <tr>
+                        <th>Imagine</th>
+                        <th>Model</th>
+                        <th>An</th>
+                        <th>Preț</th>
+                    </tr>
+
+                    <tr>
+                        <td class="img-cell">
+                            <div class="img-wrapper">
+                                <img src="imagini/corolla.jpg" alt="Toyota Corolla">
+                                <div class="hover-info">Hibrid, 25.000 km, automată</div>
+                            </div>
+                        </td>
+                        <td>Toyota Corolla</td>
+                        <td>2020</td>
+                        <td>18,000 €</td>
+                    </tr>
+
+                    <tr>
+                        <td class="img-cell">
+                            <div class="img-wrapper">
+                                <img src="imagini/bmws3.jpg" alt="BMW Seria 3">
+                                <div class="hover-info">Benzină, 40.000 km, automată</div>
+                            </div>
+                        </td>
+                        <td>BMW Seria 3</td>
+                        <td>2021</td>
+                        <td>24,800 €</td>
+                    </tr>
+
+                    <tr>
+                        <td class="img-cell">
+                            <div class="img-wrapper">
+                                <img src="imagini/daciaDuster.jpg" alt="Audi A4">
+                                <div class="hover-info">Diesel, 55.000 km, manuală</div>
+                            </div>
+                        </td>
+                        <td>Audi A4</td>
+                        <td>2018</td>
+                        <td>21,300 €</td>
+                    </tr>
+
+                    <tr>
+                        <td class="img-cell">
+                            <div class="img-wrapper">
+                                <img src="imagini/tmd3.jpg" alt="Tesla Model 3">
+                                <div class="hover-info">Electric, 15.000 km, automată</div>
+                            </div>
+                        </td>
+                        <td>Tesla Model 3</td>
+                        <td>2022</td>
+                        <td>36,500 €</td>
+                    </tr>
+
+                    <tr>
+                        <td class="img-cell">
+                            <div class="img-wrapper">
+                                <img src="imagini/daciaDuster.jpg" alt="Dacia Duster">
+                                <div class="hover-info">Diesel, 60.000 km, 4x4</div>
+                            </div>
+                        </td>
+                        <td>Dacia Duster</td>
+                        <td>2017</td>
+                        <td>13,900 €</td>
+                    </tr>
+
+                </table>
+            </article>
+        </section>
+
+        <section class="testimoniale-section">
+            <h2>Ce spun clienții noștri</h2>
+            <ul class="testimoniale-list" id="testimoniale">
+                <li class="testimonial active">
+                    <div class="testimonial-card">
+                        <p>"Experiență excelentă! Am găsit mașina perfectă în doar două zile."</p>
+                        <a href="#">Citește mai mult</a>
+                    </div>
+                </li>
+                <li class="testimonial">
+                    <div class="testimonial-card">
+                        <p>"Recomand DriveEasy tuturor! O echipă profesionistă și foarte promptă."</p>
+                        <a href="#">Citește mai mult</a>
+                    </div>
+                </li>
+                <li class="testimonial">
+                    <div class="testimonial-card">
+                        <p>"Procesul de cumpărare a fost rapid, clar și fără bătăi de cap."</p>
+                        <a href="#">Citește mai mult</a>
+                    </div>
+                </li>
+                <li class="testimonial">
+                    <div class="testimonial-card">
+                        <p>"Cele mai bune oferte la mașini second hand din oraș."</p>
+                        <a href="#">Citește mai mult</a>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="testimonial-controls">
+                <button id="prevTestimonial"><i class="fas fa-arrow-left"></i> Previous</button>
+                <button id="nextTestimonial">Next <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </section>
+
+
+
+        <!-- FOOTER -->
+        <footer>
+            <h2>Contact</h2>
+            <ul>
+                <li>Email: support@driveeasy.com</li>
+                <li>Telefon: 771 108 746</li>
+                <li>Adrese:
+                    <ul>
+                        <li>Strada Bogdan Petriceicu Nr 90</li>
+                        <li>Strada Crinului Nr 16</li>
+                    </ul>
+                </li>
+                <li>Program:
+                    <ul>
+                        <li>Luni–Vineri: 9:00 – 18:00</li>
+                        <li>Sâmbătă/Duminică: Închis</li>
+                    </ul>
+                </li>
+            </ul>
+        </footer>
+    </main>
+</div>
+
+<script src="testimoniale.js"></script>
+<script src="sortareTable.js"></script>
+<script src="sliderAuto.js"></script>
+
+</body>
+</html>
